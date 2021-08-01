@@ -44,6 +44,17 @@ async def startkaru(event):
   else:
     await shashank.reply("**Hemlo gay**")
     
+@lol.on(events.callbackquery.CallbackQuery(data="utttils"))
+async def umtils(event):
+  but = [[Button.inline('🌚 Ping', data="pkng")]]
+  but += [[Button.inline('🔰 filter', data="fiml")]]
+  but += [[Button.inline('🔰 Memify' data="mememememem")]]
+  but += [[Button.inline('🚧 Close', data="cls")]]
+  await event.reply("**Here is utils menu**", button=but)
+  
+@lol.on(events.callbackquery.CallbackQuery(data="cls"))
+async def cla(event):
+  await event.delete()
     
 print("Smex Bot Is Alive")
 lol.run_until_disconnected()

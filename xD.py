@@ -12,7 +12,7 @@ try:
   API_HASH = os.environ.get("API_HASH", None)
   OWNER_ID = int(os.environ.get("OWNER_ID", None))
   
-  shashank = TelegramClient('shashank', APP_ID, API_HASH).start(bot_token=BOT_TOKEN)
+  lol = TelegramClient('shashank', APP_ID, API_HASH).start(bot_token=BOT_TOKEN)
 
   
   print('Processing....')
@@ -27,7 +27,7 @@ async def check(ch, event, xD):
     except telethon.errors.rpcerrorlist.UserNotParticipantError:
         return False
       
-@shashank.on(events.NewMessage(pattern="[/!?=$-~.|}](start|START|Start)$"))
+@lol.on(events.NewMessage(pattern="[/!?=$-~.|}](start|START|Start)$"))
 async def startkaru(event):
   but = [[Button.url('Creator 💜', "t.me/Albertt_xD")]]
   but += [[Button.inline('Utils', data="utttils")]]

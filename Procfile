@@ -1,1 +1,1 @@
-worker: python3 xd.py
+worker: python3 xD.py

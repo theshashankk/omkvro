@@ -1,1 +1,3 @@
 telethon
+gitpython
+heroku3

@@ -29,7 +29,7 @@ async def check(ch, event, xD):
       
 @shashank.on(events.NewMessage(pattern="[/!?=$-~.|}](start|START|Start)$"))
 async def startkaru(event):
-  but = [[Button.inline('Creator 💜', "t.me/Albertt_xD")]]
+  but = [[Button.url('Creator 💜', "t.me/Albertt_xD")]]
   but += [[Button.inline('Utils', data="utttils")]]
   but += [[Button.url('Gay', f"t.me/{event.sender_username}")]]
   if event.is_private:

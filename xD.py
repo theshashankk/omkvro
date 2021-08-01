@@ -50,7 +50,7 @@ async def umtils(event):
   but += [[Button.inline('🔰 filter', data="fiml")]]
   but += [[Button.inline('🔰 Memify', data="mememememem")]]
   but += [[Button.inline('🚧 Close', data="cls")]]
-  await event.reply("**Here is utils menu**", button=but)
+  await event.edit("**Here is utils menu**", button=but)
   
 @lol.on(events.callbackquery.CallbackQuery(data="cls"))
 async def cla(event):

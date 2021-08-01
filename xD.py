@@ -37,5 +37,10 @@ async def startkaru(event):
   if event.sender_id in OWNER_ID:
     await event.reply(f"**Hey Master How are you 😉😉**")
   else:
-    await shashank.reply("**Hemlo gay**")
-    await lol.run_until_disconnected()
+    await event.reply("Gay")
+    
+    
+    
+    
+print('xD')
+lol.run_until_disconnected()

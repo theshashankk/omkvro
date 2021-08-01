@@ -35,7 +35,6 @@ async def startkaru(event):
   if event.is_private:
     return await event.reply(f'**Hey** **[{event.sender.first_name}](tg://user?id={event.sender.id})!**\n**Btw I only Work for @Albertt_xD 💜**', buttons=but)
   if event.sender_id in OWNER_ID:
-    sedkk = [[Button.inline('Groups.', data="del")]]
-    await event.reply(f"**Hey Master How are you 😉😉**", buttons=sedkk)
+    await event.reply(f"**Hey Master How are you 😉😉**")
   else:
     await shashank.reply("**Hemlo gay**")

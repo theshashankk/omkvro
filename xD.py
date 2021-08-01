@@ -48,7 +48,7 @@ async def startkaru(event):
 async def umtils(event):
   but = [[Button.inline('🌚 Ping', data="pkng")]]
   but += [[Button.inline('🔰 filter', data="fiml")]]
-  but += [[Button.inline('🔰 Memify' data="mememememem")]]
+  but += [[Button.inline('🔰 Memify', data="mememememem")]]
   but += [[Button.inline('🚧 Close', data="cls")]]
   await event.reply("**Here is utils menu**", button=but)
   

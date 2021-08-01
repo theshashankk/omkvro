@@ -38,3 +38,4 @@ async def startkaru(event):
     await event.reply(f"**Hey Master How are you 😉😉**")
   else:
     await shashank.reply("**Hemlo gay**")
+    await lol.run_until_disconnected()

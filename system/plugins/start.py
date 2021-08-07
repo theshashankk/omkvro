@@ -8,4 +8,4 @@ async def strat(e):
   but += [[Button.inline('Utils', data="utttils")]]
   but += [[Button.url('Gay', f"tg://user?id={e.sender.id}")]]
   await xd.send_file(e.chat_id, file="CAADBQADAgMAAlLIEVTp_wdXuvZM8QI")
-  await xd.send_message(e.chat_id, buttons=but)
+  await e.reply(e.chat_id, buttons=but)

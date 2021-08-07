@@ -39,10 +39,10 @@ def shashank_only():
     return decorator
   
 def load_plugins(plugin_name):
-    path = Path(f"plugins/{plugin_name}.py")
-    name = "plugins.{}".format(plugin_name)
+    path = Path(f"system/plugins/{plugin_name}.py")
+    name = "system.plugins.{}".format(plugin_name)
     spec = importlib.util.spec_from_file_location(name, path)
     load = importlib.util.module_from_spec(spec)
     load.logger = logging.getLogger(plugin_name)
     spec.loader.exec_module(load)
-    sys.modules["plugins." + plugin_name
+    sys.modules["system.plugins." + plugin_name

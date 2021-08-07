@@ -1,36 +1,30 @@
-from sys import argv
-from system.config import Config
-from system import xd
-from system import logging
-from pathlib import Path
-from sys import argv
-import telethon.utils
-from telethon import TelegramClient
-from system.utils import xd_cmd, start_xd
 import glob
+from pathlib import Path
+from system.utils import load_plugins
+import logging
+from . import xd
 
+logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s',
+                    level=logging.WARNING)
 
-
-if len(argv) not in (1, 3, 4):
-    bot.disconnect()
-else:
-    xd.start(bot_token=Config.BOT_TOKEN)
-    
 path = "plugins/*.py"
 files = glob.glob(path)
 for name in files:
-    with open(name) as f:
-        path1 = Path(f.name)
-        shortname = path1.stem
-        start_chatbot(shortname.replace(".py", ""))
+    with open(name) as a:
+        patt = Path(a.name)
+        plugin_name = patt.stem
+        load_plugins(plugin_name.replace(".py", ""))
 
-print("Your bot is alive")
-print("f")
-print("u")
-print("c")
-print("k")
+sm3x = """
+░█▀▀▀█ ░█▀▄▀█ ░█▀▀▀ ▀▄░▄▀ 
+─▀▀▀▄▄ ░█░█░█ ░█▀▀▀ ─░█── 
+░█▄▄▄█ ░█──░█ ░█▄▄▄ ▄▀░▀▄"""
+print(sm3x)
+print("smex")
+print("smex")
+print("smex")
+print("smex")
+print("smex")
 
-if len(argv) not in (1, 3, 4):
-    xd.disconnect()
-else:
+if __name__ == "__main__":
     xd.run_until_disconnected()

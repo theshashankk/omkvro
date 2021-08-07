@@ -5,6 +5,7 @@ import logging
 import importlib
 from pathlib import Path
 from system.config import Config
+from . import xd
 
 bothandler = Config.COMD_HNDLR
 def xd_cmd(add_cmd, is_args=False):
@@ -13,7 +14,7 @@ def xd_cmd(add_cmd, is_args=False):
             pattern = bothandler + add_cmd + "(?: |$)(.*)"
         else:
             pattern = bothandler + add_cmd + "$"
-        chatbot.add_event_handler(
+        xd.add_event_handler(
             func, events.NewMessage(incoming=True, pattern=pattern)
         )
 

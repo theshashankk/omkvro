@@ -1,1 +1,1 @@
-worker: python3 xD.py
+worker: python3 -m system

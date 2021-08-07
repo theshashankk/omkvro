@@ -1,3 +1,4 @@
 telethon
 gitpython
 heroku3
+python-decouple

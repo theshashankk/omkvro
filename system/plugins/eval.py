@@ -10,7 +10,7 @@ from telethon.tl import functions
 from telethon.tl import types
 from telethon.tl.types import *
 from telethon.errors import *
-from .. import xd
+from .. import xd, OWNER_ID
 bot = xd
 #
 
@@ -24,7 +24,7 @@ async def aexec(code, event):
 @bot.on(events.NewMessage(pattern="/eval"))
 async def _(event):
     cmd = event.text.split(" ", maxsplit=1)[1]
-    if event.sender_id == dev1 or event.sender_id == dev2:
+    if event.sender_id == OWNER_ID:
         pass
     else:
         return

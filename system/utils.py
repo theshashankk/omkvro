@@ -1,6 +1,5 @@
-# By < @xditya >
-# // @BotzHub //
-
+# // @Albertt_xD \\
+# \\ @Albertt_xD //
 import sys
 import logging
 import importlib

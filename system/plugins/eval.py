@@ -11,7 +11,7 @@ from telethon.tl import types
 from telethon.tl.types import *
 from telethon.errors import *
 from .. import xd
-xd = bot
+bot = xd
 #
 
 async def aexec(code, event):

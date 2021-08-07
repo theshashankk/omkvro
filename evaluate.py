@@ -1,4 +1,4 @@
-from telethon import events
+"""from telethon import events
 import re, os
 from xD import lol as bot
 import asyncio
@@ -71,3 +71,4 @@ async def _(event):
 
     else:
         await event.reply(final_output)
+"""

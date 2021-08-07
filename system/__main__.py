@@ -7,7 +7,7 @@ from . import xd
 logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s',
                     level=logging.WARNING)
 
-path = "plugins/*.py"
+path = "system/plugins/*.py"
 files = glob.glob(path)
 for name in files:
     with open(name) as a:

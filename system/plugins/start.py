@@ -1,6 +1,6 @@
 from telethon import events
 from telethon import Button
-from .. import xd
+from .. import xd, OWNER_ID
 
 @xd.on(events.NewMessage(incoming=True, pattern="/start"))
 async def strat(e):

@@ -2,6 +2,10 @@
 # \\ @Albertt_xD //
 import sys
 import logging
+from telethon import events
+import functools
+import glob
+import inspect
 import importlib
 from pathlib import Path
 from system.config import Config

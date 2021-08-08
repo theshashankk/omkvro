@@ -3,7 +3,7 @@ from sqlalchemy import (
     String,
     Integer
 )
-from . import (
+from system.sql.__init__ import (
     SESSION,
     BASE
 )

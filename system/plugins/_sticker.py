@@ -1,4 +1,4 @@
-from telethon import events
+from telethon import events, Button
 from .. import xd
 
 @xd.on(events.NewMessage(incoming=True, pattern="/infoo"))

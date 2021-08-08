@@ -24,6 +24,4 @@ async def _(event):
                 ),
             )
     else:
-        await xd.send_message(
-            event.chat_id, "Current Chat ID: `{}`".format(str(event.chat_id))
-        )
+        await xd.send_message(event.chat_id, f"Current Chat ID: `{event.chat_id}`")

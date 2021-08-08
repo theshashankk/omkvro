@@ -5,7 +5,7 @@ from sqlalchemy import (
     String,
     Integer
 )
-from system.sql.__init__ import (
+from system.plugins.sql.__init__ import (
     SESSION,
     BASE
 )

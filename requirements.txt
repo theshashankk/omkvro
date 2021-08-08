@@ -3,3 +3,7 @@ gitpython
 heroku3
 python-decouple
 pyrogram
+cryptg
+heroku3
+sqlalchemy==1.3.20
+psycopg2

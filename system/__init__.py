@@ -1,5 +1,6 @@
 # \\ @Albertt_xD //
 # // @Albertt_xD \\
+import os
 from telethon import TelegramClient
 from datetime import datetime
 from decouple import config

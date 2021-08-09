@@ -1,6 +1,6 @@
 from telethon import Button, events
 
-from .. import xd
+from .. import xd, OWNER_ID
 
 
 @xd.on(events.NewMessage(incoming=True, pattern="/start"))

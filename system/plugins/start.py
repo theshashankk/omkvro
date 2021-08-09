@@ -11,7 +11,7 @@ async def strat(e):
     omk = [
         [
             Button.url("🐼 Creator 🐼", "t.me/Albertt_xD"),
-            Button.url("🐼 Close 🐼", data="cls"),
+            Button.inline("🐼 Close 🐼", data="cls"),
         ]
     ]
     if e.sender_id == OWNER_ID:

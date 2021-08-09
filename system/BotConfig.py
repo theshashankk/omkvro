@@ -1,4 +1,6 @@
 import os
+
+
 class Config(object):
     BOT_TOKEN = os.environ.get("BOT_TOKEN", None)
     REDIS_URI = os.environ.get("DATABASE_URL", None)
@@ -11,5 +13,8 @@ class Config(object):
     JMT_ENABLE = os.environ.get("JMT_ENABLE", False)
     JMTC_ID = int(os.environ.get("JMTC_ID", False))
     JMTC_LINK = os.environ.get("JMTC_LINK", "t.me/AboutShashankxD")
-    CUSTOM_IMG = os.environ.get("CUSTOM_IMG", "https://static.botsrv.com/website/img/quriobot_favicon.1727b193.png")
+    CUSTOM_IMG = os.environ.get(
+        "CUSTOM_IMG",
+        "https://static.botsrv.com/website/img/quriobot_favicon.1727b193.png",
+    )
     REDIS_PASSWORD = os.environ.get("REDIS_PASSWORD", None)

@@ -1,51 +1,55 @@
 # \\ @Albertt_xD //
 # // @Albertt_xD \\
 import os
-from telethon import TelegramClient
+import time
 from datetime import datetime
+from logging import DEBUG, INFO, FileHandler, StreamHandler, basicConfig, getLogger
+
 from decouple import config
 from redis import ConnectionError, ResponseError, StrictRedis
-from logging import DEBUG, INFO, FileHandler, StreamHandler, basicConfig, getLogger
-import time
+from telethon import TelegramClient
+
 from system.BotConfig import Config
 
 LOGS = getLogger(__name__)
 
 if os.path.exists("logs.txt"):
     os.remove("logs.txt")
-    
-logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s',
-                    level=logging.WARNING)
+
+logging.basicConfig(
+    format="[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s", level=logging.WARNING
+)
 LOGS.info(
     """                    
 █▀ ▀█▀ ▄▀█ █▀█ ▀█▀ █ █▄░█ █▀▀
 ▄█ ░█░ █▀█ █▀▄ ░█░ █ █░▀█ █▄█
     """
-    )
+)
 
 if not Config.APP_ID:
-  LOGS.info("SED VAI PLEASE ADD API ID IN VARS")
-  exit(1)
+    LOGS.info("SED VAI PLEASE ADD API ID IN VARS")
+    exit(1)
 
 if not Config.API_HASH:
-  LOGS.info("SEE VRO PLEASE ADD API HASH IN VARS")
-  exit(1)
-  
+    LOGS.info("SEE VRO PLEASE ADD API HASH IN VARS")
+    exit(1)
+
 if not Config.BOT_TOKEN:
-  LOGS.info("SED VRO PLEASE ADD BOT TOKEN")
-  exit(1)
-  
+    LOGS.info("SED VRO PLEASE ADD BOT TOKEN")
+    exit(1)
+
 if not Config.REDIS_URI:
-  LOGS.info("SED VRO PLEASE ADD REDIS URI IN VARS")
-  exit(1)
-  
+    LOGS.info("SED VRO PLEASE ADD REDIS URI IN VARS")
+    exit(1)
+
 if not Config.REDIS_PASSWORD:
-  LOGS.info("SED VRO PLEASE ADD REDIS PASSWORD IN VARS")
-  exit(1)
-  
+    LOGS.info("SED VRO PLEASE ADD REDIS PASSWORD IN VARS")
+    exit(1)
+
 if not Config.OWNER_ID:
-  LOGS.info("VRO ADD OWNER ID IN VARS")
-  exit(1)
+    LOGS.info("VRO ADD OWNER ID IN VARS")
+    exit(1)
+
 
 def connect_redis():
     yuvi = Config.REDIS_URI.split(":")
@@ -57,6 +61,7 @@ def connect_redis():
         decode_responses=True,
     )
     return op
+
 
 try:
     db = connect_redis()
@@ -101,6 +106,6 @@ API_HASH = config("API_HASH", default=None)
 BOT_TOKEN = config("BOT_TOKEN", default=None)
 OWNER_ID = config("OWNER_ID", default=None)
 
-xd = TelegramClient('xd', APP_ID, API_HASH).start(bot_token=BOT_TOKEN) 
+xd = TelegramClient("xd", APP_ID, API_HASH).start(bot_token=BOT_TOKEN)
 
 PLUGINS = []

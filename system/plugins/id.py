@@ -1,6 +1,8 @@
 from telethon import events
 from telethon.utils import pack_bot_file_id
+
 from .. import xd
+
 
 @xd.on(events.NewMessage(pattern="^/id"))
 async def _(event):

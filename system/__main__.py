@@ -1,11 +1,14 @@
 import glob
-from pathlib import Path
-from system.utils import load_plugins
 import logging
+from pathlib import Path
+
+from system.utils import load_plugins
+
 from . import xd
 
-logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s',
-                    level=logging.WARNING)
+logging.basicConfig(
+    format="[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s", level=logging.WARNING
+)
 
 path = "system/plugins/*.py"
 files = glob.glob(path)

@@ -1,9 +1,10 @@
 # // @Albertt_xD \\
 # \\ @Albertt_xD //
-import sys
-import logging
 import importlib
+import logging
+import sys
 from pathlib import Path
+
 
 def load_plugins(plugin_name):
     path = Path(f"system/plugins/{plugin_name}.py")

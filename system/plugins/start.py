@@ -20,7 +20,7 @@ async def strat(e):
 
 
 """
-await xd.send_file(e.chat_id, file="CAADBQADAgMAAlLIEVTp_wdXuvZM8QI")
+a#wait xd.send_file(e.chat_id, file="CAADBQADAgMAAlLIEVTp_wdXuvZM8QI")
 
     await e.reply(e.chat_id, buttons=but)
 """

@@ -21,9 +21,9 @@ jobs:
           sudo apt-get install libpq-dev
           python -m pip install --upgrade pip
           pip install wheel
-          pip install -r Zsetup.txt
+          pip install -r requirements.txr
           pip install flake8 flake8-print flake8-quotes
       - name: Check for showstoppers
         run: |
           # stop the build if there are Python syntax errors
-          flake8 . --count --select=E999 --show-source --statistics --exclude="exampleconfig.py"
+          flake8 . --count --select=E999 --show-source --statistics --exclude="config.py"

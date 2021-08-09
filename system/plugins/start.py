@@ -1,8 +1,10 @@
 from telethon import Button, events
 
 from .. import OWNER_ID, xd
-
-
+from system.BotConfig import Config
+#// SMEX \\
+SMEX_ID = Config.OWNER_ID
+#\\ SMEX //
 @xd.on(events.NewMessage(incoming=True, pattern="/start"))
 async def strat(e):
     but = [[Button.url("Creator 💜", "t.me/Albertt_xD")]]
@@ -14,7 +16,7 @@ async def strat(e):
             Button.inline("🐼 Close 🐼", data="cls"),
         ]
     ]
-    if e.sender_id == OWNER_ID:
+    if e.sender_id == SMEX_ID:
         return await xd.send_message(e.chat_id, "Hemlo sur", buttons=but)
     else:
         await xd.send_message(e.chat_id, "CONTACT MY OWNER TU ACCESS ME", buttons=omk)

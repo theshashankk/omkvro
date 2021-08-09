@@ -17,7 +17,7 @@ async def strat(e):
     if e.sender_id == OWNER_ID:
         return await xd.send_message(e.chat_id, "Hemlo sur", buttons=but)
     else:
-        await xd.send_message("CONTACT MY OWNER TU ACCESS ME", buttons=omk)
+        await xd.send_message(e.chat_id, "CONTACT MY OWNER TU ACCESS ME", buttons=omk)
 
 
 """

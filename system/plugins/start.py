@@ -10,7 +10,7 @@ SMEX_ID = Config.OWNER_ID
 @xd.on(events.NewMessage(incoming=True, pattern="/start"))
 async def strat(e):
     but = [[Button.url("Creator 💜", "t.me/Albertt_xD")]]
-    but += [[Button.inline("Utils", data="utttils")]]
+    but += [[Button.inline("Utils", data="utis")]]
     omk = [
         [
             Button.url("🐼 Creator 🐼", "t.me/Albertt_xD"),
@@ -34,7 +34,7 @@ async def omk(e):
     await e.delete()
 
 
-@xd.on(events.callbackquery.CallbackQuery(data="uttils"))
+@xd.on(events.callbackquery.CallbackQuery(data="utis"))
 async def ut(e):
     sed = [[Button.inline("🐼 Comming soon", data="soon")]]
     await e.edit(e.chat_id, "HERE IS MY UTILS MENU", button=sed)

@@ -1,5 +1,5 @@
 from telethon import Button, events
-
+telethon.tl.custom import button
 from .. import OWNER_ID, xd
 
 
@@ -12,7 +12,11 @@ async def strat(e):
     if e.sender_id == OWNER_ID:
         return await e.reply(e.chat_id, "Hemlo sur", buttons=but)
     else:
-        await e.reply("CONTACT MY OWNER TU ACCESS ME", button=omk)
+        await e.reply("CONTACT MY OWNER TU ACCESS ME", button=[
+            [Button.url("🐼 Creator 🐼", "t.me/ShashankxD")],
+            [Button.url("🐼 Close 🐼", data="cls")]
+            ]
+                      )
 
 
 """

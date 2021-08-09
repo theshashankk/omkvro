@@ -1,5 +1,5 @@
 from . import *
-
+from .. import xd
 @xd.on(events.NewMessage(incoming=True, pattern="/gcast")
 async def _(e):
     if str(e.sender_id) in all_sudo():

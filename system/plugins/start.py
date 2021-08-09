@@ -16,7 +16,7 @@ async def strat(e):
             [Button.url("🐼 Creator 🐼", "t.me/ShashankxD")],
             [Button.url("🐼 Close 🐼", data="cls")]
             ]
-                      )
+        )
 
 
 """

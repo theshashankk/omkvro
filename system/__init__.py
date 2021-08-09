@@ -17,9 +17,11 @@ LOGS = getLogger(__name__)
 if os.path.exists("logs.txt"):
     os.remove("logs.txt")
 
-logging.basicConfig(
-    format="[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s", level=logging.WARNING
-)
+basicConfig(
+    format="[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s",
+    level=INFO,
+    handlers=[FileHandler("logs.txt"), StreamHandler()],
+    )
 LOGS.info(
     """                    
 █▀ ▀█▀ ▄▀█ █▀█ ▀█▀ █ █▄░█ █▀▀

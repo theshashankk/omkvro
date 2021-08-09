@@ -28,10 +28,11 @@ a#wait xd.send_file(e.chat_id, file="CAADBQADAgMAAlLIEVTp_wdXuvZM8QI")
 
     await e.reply(e.chat_id, buttons=but)
 """
-# Callback 
+# Callback
 @xd.on(events.callbackquery.CallbackQuery(data="cls"))
 async def omk(e):
     await e.delete()
+
 
 @xd.on(events.callbackquery.CallbackQuery(data="uttils"))
 async def ut(e):

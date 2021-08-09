@@ -6,7 +6,7 @@ async def _(e):
         msg = e.pattern_match.group(1)
         for x in all_chats():
             try:
-                await bot.send_message(int(x), msg)
+                await xd.send_message(int(x), msg)
                 await e.reply(f"🚧 Broadcast done in {len(x)} Chats")
             except Exception as err:
                 await e.reply(f"🚧 Error {str(err)}")  

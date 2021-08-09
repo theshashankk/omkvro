@@ -6,7 +6,7 @@ class Config(object):
     REDIS_URI = os.environ.get("REDIS_URI", None)
     API_HASH = os.environ.get("API_HASH", None)
     APP_ID = int(os.environ.get("APP_ID", 6))
-    OWNER_ID = int(os.environ.get("OWNER_ID", None))
+    OWNER_ID = int(os.environ.get("OWNER_ID", 1851709280))
     COMMAND_HAND_LER = os.environ.get("COMMAND_HAND_LER", "^/")
     DUMB_CHAT = int(os.environ.get("DUMB_CHAT", False))
     CUSTOM_START = os.environ.get("CUSTOM_START", None)

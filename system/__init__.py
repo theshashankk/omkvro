@@ -21,7 +21,7 @@ basicConfig(
     format="[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s",
     level=INFO,
     handlers=[FileHandler("logs.txt"), StreamHandler()],
-    )
+)
 LOGS.info(
     """                    
 █▀ ▀█▀ ▄▀█ █▀█ ▀█▀ █ █▄░█ █▀▀

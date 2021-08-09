@@ -3,7 +3,7 @@ import os
 
 class Config(object):
     BOT_TOKEN = os.environ.get("BOT_TOKEN", None)
-    REDIS_URI = os.environ.get("DATABASE_URL", None)
+    REDIS_URI = os.environ.get("REDIS_URI", None)
     API_HASH = os.environ.get("API_HASH", None)
     APP_ID = int(os.environ.get("APP_ID", 6))
     OWNER_ID = int(os.environ.get("OWNER_ID", None))

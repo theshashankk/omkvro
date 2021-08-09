@@ -1,10 +1,12 @@
 from telethon import Button, events
 
-from .. import OWNER_ID, xd
 from system.BotConfig import Config
-#// SMEX \\
+
+from .. import xd
+
+# // SMEX \\
 SMEX_ID = Config.OWNER_ID
-#\\ SMEX //
+# \\ SMEX //
 @xd.on(events.NewMessage(incoming=True, pattern="/start"))
 async def strat(e):
     but = [[Button.url("Creator 💜", "t.me/Albertt_xD")]]

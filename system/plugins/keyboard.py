@@ -8,5 +8,5 @@ async def lwda(event):
       lwda = event.pattern_match.group(1)
       text.append(lwda)
       await event.reply(event.chat_id, "Done added\nWanna Add more 🤔🤔\nType /add <txt>")
-    else:
-      await event.reply(event.chat_id, "jana chkke")
+      else:
+        await event.reply(event.chat_id, "jana chkke")

@@ -9,6 +9,8 @@ SMEX_ID = Config.OWNER_ID
 # //
 @xd.on(events.NewMessage(incoming=True, pattern="/add"))
 async def add(event):
+    if not event.is_group:
+        return
     if event.sender_id == SMEX_ID:
         try:
             lwda = event.pattern_match.group(1)

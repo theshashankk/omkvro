@@ -1,6 +1,9 @@
-from telethon import events, Button
-from .. import db, xd
+from telethon import events
+
 from system.BotConfig import Config
+
+from .. import xd
+
 # \\
 SMEX_ID = Config.OWNER_ID
 # //

@@ -1,4 +1,4 @@
-from .. import xd
+from .. import xd, db
 
 
 @xd.on(events.NewMessage(incoming=True, pattern="/ban"))

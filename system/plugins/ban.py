@@ -1,6 +1,6 @@
 from telethon import events
 
-from .. import xd, db
+from .. import db, xd
 
 
 @xd.on(events.NewMessage(incoming=True, pattern="/ban"))

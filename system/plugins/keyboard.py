@@ -1,8 +1,10 @@
-from telethon import events
-
-
+from telethon import events, Button
+from .. import db, xd
+from system.BotConfig import Config
 # \\
-@xD.on(events.NewMessage(incoming=True, pattern="/add"))
+SMEX_ID = Config.OWNER_ID
+# //
+@xd.on(events.NewMessage(incoming=True, pattern="/add"))
 async def add(event):
     if event.sender_id == SMEX_ID:
         try:

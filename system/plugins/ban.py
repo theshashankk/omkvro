@@ -1,4 +1,3 @@
-from system.plugins.db.xD import db
 from .. import xd
 
 

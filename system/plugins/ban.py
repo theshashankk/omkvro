@@ -1,5 +1,4 @@
 from .. import xd
-from system.plugins.db.xD import db
 
 
 @xd.on(events.NewMessage(incoming=True, pattern="/ban"))

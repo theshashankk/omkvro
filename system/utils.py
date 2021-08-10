@@ -14,4 +14,4 @@ def load_plugins(plugin_name):
     load.logger = logging.getLogger(plugin_name)
     spec.loader.exec_module(load)
     sys.modules["system.plugins." + plugin_name] = load
-    print("┏━┅┅┄┄⟞⟦⟧⟝┄┄┉┉━┓\nimported\n┗━┅┅┄┄⟞⟦⟧⟝┄┄┉┉━┛ ")
+    print("┏━┅┅┄┄⟞⟦⟧⟝┄┄┉┉━┓\nImporting plugins\n┗━┅┅┄┄⟞⟦⟧⟝┄┄┉┉━┛ ")

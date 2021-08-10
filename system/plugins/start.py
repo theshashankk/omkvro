@@ -37,4 +37,4 @@ async def omk(e):
 @xd.on(events.callbackquery.CallbackQuery(data="utis"))
 async def ut(e):
     sed = [[Button.inline("🐼 Comming soon", data="soon")]]
-    await e.edit(e.chat_id, "HERE IS MY UTILS MENU", button=sed)
+    await e.edit_message(e.chat_id, "HERE IS MY UTILS MENU", buttons=sed)

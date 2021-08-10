@@ -1,5 +1,5 @@
 from .. import xd
-
+from system.plugins.db.xD import db
 
 @xd.on(events.NewMessage(incoming=True, pattern="/ban"))
 async def banhammer(event):
@@ -9,13 +9,13 @@ async def banhammer(event):
     target = int(udB.get(str(x.id)))
     if not is_blacklisted(target):
         blacklist_user(target)
-        await asst.send_message(event.chat_id, f"#BAN\nUser - {target}")
-        await asst.send_message(
+        await xd.send_message(event.chat_id, f"#BAN\nUser - {target}")
+        await xd.send_message(
             target,
             "`GoodBye! You have been banned.`\n**Further messages you send will not be forwarded.**",
         )
     else:
-        return await asst.send_message(event.chat_id, f"User is already banned!")
+        return await xd.send_message(event.chat_id, f"User is already banned!")
 
 
 @xd.on(events.NewMessage(incoming=True, pattern="/unban"))
@@ -26,7 +26,7 @@ async def banhammer(event):
     target = int(udB.get(str(x.id)))
     if is_blacklisted(target):
         rem_blacklist(target)
-        await asst.send_message(event.chat_id, f"#UNBAN\nUser - {target}")
-        await asst.send_message(target, "`Congrats! You have been unbanned.`")
+        await xd.send_message(event.chat_id, f"#UNBAN\nUser - {target}")
+        await xd.send_message(target, "`Congrats! You have been unbanned.`")
     else:
-        return await asst.send_message(event.chat_id, f"User was never banned!")
+        return await xd.send_message(event.chat_id, f"User was never banned!")

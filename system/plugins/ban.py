@@ -1,6 +1,7 @@
 from .. import xd
 from system.plugins.db.xD import db
 
+
 @xd.on(events.NewMessage(incoming=True, pattern="/ban"))
 async def banhammer(event):
     x = await event.get_reply_message()

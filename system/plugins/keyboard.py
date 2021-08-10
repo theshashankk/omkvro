@@ -6,6 +6,7 @@ from .. import xd
 
 # \\
 SMEX_ID = Config.OWNER_ID
+text = []
 # //
 @xd.on(events.NewMessage(incoming=True, pattern="/add"))
 async def add(event):

@@ -22,4 +22,4 @@ async def add(event):
     else:
         await event.reply(event.chat_id, "__JANA XHKKE__")
 
-@xd.on(events.NewMessage(incoming=True, pattern="/smwx)))
+@xd.on(events.NewMessage(incoming=True, pattern="/smwx))

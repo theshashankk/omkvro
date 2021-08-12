@@ -1,4 +1,4 @@
-from telethon import events
+from telethon import events, Button
 
 from system.BotConfig import Config
 
@@ -26,9 +26,6 @@ async def add(event):
 @xd.on(events.NewMessage(incoming=True, pattern="/smwx"))
 async def main(event):
     lel = event.pattern_match.group(1)
-    [[Button.text(f"{lel}")]]
-    await xd.send_file(
-        event.chat_id,
-        file="CAACAgUAAxkBAAELN8hhESppbDCjneoJnOfCZMpTHnayFQAClwIAAver2FTTWdasUnQxayAE",
-        buttons=omk,
-    )
+    omk = [[Button.text(f"{lel}")]]
+    if event.sender_id == SMEX_ID:
+        return await xd.send_file(event.chat_id, file="CAACAgUAAxkBAAELN8hhESppbDCjneoJnOfCZMpTHnayFQAClwIAAver2FTTWdasUnQxayAE", buttons=omk)

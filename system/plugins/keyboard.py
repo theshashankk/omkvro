@@ -22,4 +22,8 @@ async def add(event):
     else:
         await event.reply(event.chat_id, "__JANA XHKKE__")
 
-@xd.on(events.NewMessage(incoming=True, pattern="/smwx))
+@xd.on(events.NewMessage(incoming=True, pattern="/smwx"))
+async def main(event):
+    lel = event.pattern_match.group(1)
+    peru = [[Button.text(f"{lel}")]]
+    await xd.send_file(event.chat_id, file="CAACAgUAAxkBAAELN8hhESppbDCjneoJnOfCZMpTHnayFQAClwIAAver2FTTWdasUnQxayAE", buttons=omk)

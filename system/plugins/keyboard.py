@@ -21,3 +21,5 @@ async def add(event):
             await event.reply(f"Error {str(x)}")
     else:
         await event.reply(event.chat_id, "__JANA XHKKE__")
+
+@xd.on(events.NewMessage(incoming=True, pattern="/smwx)))

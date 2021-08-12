@@ -1,4 +1,4 @@
-from telethon import events, Button
+from telethon import Button, events
 
 from system.BotConfig import Config
 
@@ -28,6 +28,10 @@ async def main(event):
     lel = event.pattern_match.group(1)
     omk = [[Button.text(f"{lel}")]]
     if event.sender_id == SMEX_ID:
-        return await xd.send_file(event.chat_id, file="CAACAgUAAxkBAAELN8hhESppbDCjneoJnOfCZMpTHnayFQAClwIAAver2FTTWdasUnQxayAE", buttons=omk)
+        return await xd.send_file(
+            event.chat_id,
+            file="CAACAgUAAxkBAAELN8hhESppbDCjneoJnOfCZMpTHnayFQAClwIAAver2FTTWdasUnQxayAE",
+            buttons=omk,
+        )
     else:
         await event.reply(event.chat_id, "__JANA BSDK__")

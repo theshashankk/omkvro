@@ -9,18 +9,18 @@ SMEX_ID = Config.OWNER_ID
 text = []
 # //
 @xd.on(events.NewMessage(incoming=True, pattern="/add"))
-async def add(event):
-    if not event.is_group:
+async def add(e):
+    if not e.is_group:
         return
-    if event.sender_id == SMEX_ID:
+    if e.sender_id == SMEX_ID:
         try:
-            lwda = event.pattern_match.group(1)
+            lwda = e.pattern_match.group(1)
             text.append(lwda)
-            await event.reply(event.chat_id, f"__Done__ Added\n**{lwda}**")
+            await e.reply(f"__Done__\n**Added: {lwda}")
         except Exception as x:
-            await event.reply(f"Error {str(x)}")
+            await e.reply(f"🚧 Error {str(x)}")
     else:
-        await event.reply(event.chat_id, "__JANA XHKKE__")
+        await e.reply("__JANA CHKKE__")
 
 
 @xd.on(events.NewMessage(incoming=True, pattern="/smwx"))

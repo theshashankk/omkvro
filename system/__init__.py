@@ -32,6 +32,8 @@ LOGS.info(
 if not Config.APP_ID:
     LOGS.info("SED VAI PLEASE ADD API ID IN VARS")
     exit(1)
+else:
+    LOGS.ingo("GOTTED API_ID")
 
 if not Config.API_HASH:
     LOGS.info("SEE VRO PLEASE ADD API HASH IN VARS")
